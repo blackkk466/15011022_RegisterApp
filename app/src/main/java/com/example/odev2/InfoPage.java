@@ -133,7 +133,7 @@ public class InfoPage extends AppCompatActivity {
                      CALL_PERMISSION);
         } else {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData( Uri.parse("tel:"+person.getPhone()));
+            callIntent.setData( Uri.parse("tel:"+person.getEmail()));
 
             startActivity(callIntent);
         }
