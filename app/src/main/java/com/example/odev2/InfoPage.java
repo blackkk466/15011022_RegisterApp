@@ -91,7 +91,7 @@ public class InfoPage extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent mailIntent = new Intent(Intent.ACTION_SENDTO);
-                mailIntent.setData( Uri.parse("mailto:"+person.getPhone()));
+                mailIntent.setData( Uri.parse("mailto:"+person.getEmail()));
 
                 startActivity(mailIntent);
             }
@@ -133,7 +133,7 @@ public class InfoPage extends AppCompatActivity {
                      CALL_PERMISSION);
         } else {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData( Uri.parse("tel:"+person.getEmail()));
+            callIntent.setData( Uri.parse("tel:"+person.getPhone()));
 
             startActivity(callIntent);
         }
