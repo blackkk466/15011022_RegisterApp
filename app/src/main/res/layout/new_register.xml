@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/second"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="Profil Fotoğrafı"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile"/>
+
+        <Button
+            android:id="@+id/buttonLoadPicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Fotoğraf Seç"
+            android:layout_gravity="center"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/first"
+        app:layout_constraintBottom_toTopOf="@id/third"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="5dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ad:"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:inputType="textPersonName"
+            android:hint="Adınızı giriniz."
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second"
+        app:layout_constraintBottom_toTopOf="@id/fourth"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Soyad:"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/editSName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:inputType="textPersonName"
+            android:hint="Soyadınızı giriniz."
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fourth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/third"
+        app:layout_constraintBottom_toTopOf="@id/fifth"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/tcView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TC No:"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/editTC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="TC No giriniz."
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fifth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fourth"
+        app:layout_constraintBottom_toTopOf="@+id/sixth"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Doğum Tarihi:"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/editBirthdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="Tarih seçiniz."
+            android:inputType="date"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/pickButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Seç"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sixth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fifth"
+        app:layout_constraintBottom_toTopOf="@+id/seventh"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="E-posta:"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="E-posta adresinizi giriniz."
+            android:inputType="textEmailAddress"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/seventh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sixth"
+        app:layout_constraintBottom_toTopOf="@+id/clearForm"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/numberView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cep-tel:"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/editNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="Cep telefonunuzu giriniz."
+            android:inputType="phone"
+            android:digits="0123456789+"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/clearForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temizle"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintTop_toBottomOf="@id/seventh"
+        app:layout_constraintBottom_toTopOf="@id/sendButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Gönder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clearForm"
+        android:textSize="12sp"/>
+
+</android.support.constraint.ConstraintLayout>

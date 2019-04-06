@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="Profil Fotoğrafı"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/tc_Layout"
+        app:layout_constraintEnd_toStartOf="@id/nameSurname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <LinearLayout
+        android:id="@+id/nameSurname"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="0"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/tc_Layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profilePic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        tools:ignore="RtlSymmetry"
+        android:background="@android:color/darker_gray">
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Ad"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/surnameView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Soyad"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tc_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameSurname"
+        app:layout_constraintBottom_toTopOf="@id/day_Layout"
+        android:background="@android:color/darker_gray">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TC No:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_dark"/>
+
+        <TextView
+            android:id="@+id/tcNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/day_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tc_Layout"
+        app:layout_constraintBottom_toTopOf="@id/mail_Layout"
+        android:background="@android:color/darker_gray">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Doğum Günü:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_dark"/>
+
+        <TextView
+            android:id="@+id/birthday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Yaş:"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_dark"/>
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mail_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/day_Layout"
+        app:layout_constraintBottom_toTopOf="@id/num_Layout"
+        android:background="@android:color/darker_gray">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="E-posta:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_dark"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textSize="16sp"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/num_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mail_Layout"
+        app:layout_constraintBottom_toTopOf="@id/showCourses"
+        android:background="@android:color/darker_gray">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cep-tel:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_dark"/>
+
+        <TextView
+            android:id="@+id/phonenumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textSize="16sp"
+            android:clickable="true"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/showCourses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Dersleri Görüntüle"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintTop_toBottomOf="@id/num_Layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+</android.support.constraint.ConstraintLayout>
